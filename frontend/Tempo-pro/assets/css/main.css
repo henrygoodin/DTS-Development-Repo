@@ -141,6 +141,7 @@ h6 {
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+  position: fixed;
 }
 
 
@@ -733,70 +734,6 @@ section,
 }
 
 .section-title p .description-title {
-  color: var(--accent-color);
-}
-
-
-/*--------------------------------------------------------------
-# U.S. Developments Section
---------------------------------------------------------------*/
-.us-developments .content h3 {
-  font-weight: 700;
-  font-size: 34px;
-  margin-bottom: 30px;
-}
-
-.us-developments .content p {
-  margin-bottom: 30px;
-}
-
-.us-developments .content .about-btn {
-  padding: 8px 30px 9px 30px;
-  color: var(--accent-color);
-  border-radius: 50px;
-  transition: 0.3s;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 13px;
-  display: inline-flex;
-  align-items: center;
-  border: 2px solid var(--accent-color);
-}
-
-.us-developments .content .about-btn i {
-  font-size: 16px;
-  padding-left: 5px;
-}
-
-.us-developments .content .about-btn:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.us-developments .icon-box i {
-  font-size: 40px;
-  color: var(--accent-color);
-  margin-bottom: 10px;
-}
-
-.us-developments .icon-box h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-}
-
-.us-developments .icon-box h4 a {
-  color: var(--heading-color);
-  transition: 0.3s;
-}
-
-.us-developments .icon-box p {
-  font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin-bottom: 0;
-}
-
-.us-developments .icon-box:hover h4 a {
   color: var(--accent-color);
 }
 
