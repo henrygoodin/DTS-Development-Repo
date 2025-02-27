@@ -18,22 +18,26 @@ app.use(cookieParser());
 app.use(express.static('frontend/dist'));
 
 // ✅ Define allowed origins
-const allowedOrigins = ['http://127.0.0.1:5500', 'http://localhost:5500', 'https://dts-development-frontend.onrender.com/'];
+const allowedOrigins = [
+    'http://127.0.0.1:5500',
+    'http://localhost:5500',
+    'https://dts-development-frontend.onrender.com'
+];
 
-
-// ✅ Correct CORS configuration
 app.use(cors({
     origin: (origin, callback) => {
         if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
         } else {
+            console.log(`Blocked by CORS: ${origin}`); // Debugging
             callback(new Error('Not allowed by CORS'));
         }
     },
-    methods: ['GET', 'POST', 'OPTIONS'], // Allow preflight OPTIONS request
+    methods: ['GET', 'POST', 'OPTIONS'], // Ensure preflight requests work
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
-    credentials: true,
+    credentials: true
 }));
+
 
 // ✅ Handle preflight OPTIONS requests
 app.options('*', cors());
