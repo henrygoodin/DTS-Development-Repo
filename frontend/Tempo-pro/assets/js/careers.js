@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            const response = await fetch("http://localhost:3000/api/careers/submit", {
+            const response = await fetch("https://dts-development-backend.onrender.com/api/careers/submit", {
                 method: "POST",
                 body: formData,
             });
